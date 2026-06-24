@@ -17,3 +17,16 @@
 #     j+=1
 # print(l)
 
+
+
+
+# l=[1,0,2,3,0,1,4,0,5]
+# i=0
+# j=0
+# while j<len(l):
+#     if l[j]!=0:
+#         l[i],l[j]=l[j],l[i]
+#         i+=1
+#         # here not else block becase j+=1 has to be done even if it is zero or non zero 
+#     j+=1
+# print(l)
