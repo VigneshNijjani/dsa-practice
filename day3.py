@@ -15,3 +15,26 @@ def roman(s):
 
 print(roman("III"))
 
+
+
+# buy vs sell stocks
+def stock(prices):
+    i=0
+    j=1
+    buy=0
+    sell=0
+    while i<j and j<len(prices)-1:
+        if prices[i+1]<prices[buy] :
+            buy=i+1 
+        if prices[j+1]>prices[sell]:
+            sell=j+1
+        i+=1
+        j+=1
+    if prices[buy]<prices[sell]:
+        return prices[sell]-prices[buy]
+    else:
+        return 0
+
+stock([7,1,2,5,6,4,3])      
+
+#A
