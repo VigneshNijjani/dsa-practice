@@ -38,4 +38,4 @@ def stock(prices):
 stock([7,1,2,5,6,4,3])      
 
 #Abc
-a=100
+a=1001
