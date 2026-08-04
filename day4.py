@@ -348,12 +348,5 @@ def rain(height):
 
 
 
-
-
-
-
-
-
-
 height = [3,0,1,0,4,0,2]
 rain(height)
