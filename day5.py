@@ -1,6 +1,11 @@
-def solve(nums):
-    for i in range(len(nums)):
-        print(nums[i:]+nums[:i])
+# def solve(nums):
+#     for i in range(len(nums)):
+#         print(nums[i:]+nums[:i])
 
-nums=[1,2,3,4,5]
-solve(nums)
+# nums=[1,2,3,4,5]
+# solve(nums)
+
+
+l=["",""]
+for i in l:
+    print(l)
