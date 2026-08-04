@@ -320,3 +320,40 @@
 
 
 # --------------------------------------------------------------------------------------------------
+
+def rain(height):
+    left_max=[0*i for i in height]
+    right_max=[0*i for i in height]
+    ans=0
+    def left():
+        left_max[0]=height[0]
+        for i in range(1,len(height)):
+            left_max[i]=max((left_max[i-1]),height[i])
+        # print(left_max)
+    def right():
+        right_max[-1]=height[-1]
+        for i in range(len(height)-2,-1,-1):
+            right_max[i]=max(right_max[i+1],height[i])
+        # print(right_max)
+    left()
+    right()
+
+    for i in range(1,len(height)-1):
+        storage=min(left_max[i],right_max[i])
+        storage=storage-height[i]
+        if storage>0:
+            ans+=storage
+    print(ans)
+
+
+
+
+
+
+
+
+
+
+
+height = [3,0,1,0,4,0,2]
+rain(height)
