@@ -51,7 +51,7 @@ display(head)
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------
 
-double linked list
+# double linked list
 
 class double_linked_list:
     def __init__(self,val,next=None,prev=None):
@@ -97,20 +97,12 @@ display(head)
 #                              or 
 # inserting element at head position of double linked lists
 
-head,tail=double_linked_list(10)
-# inserting secound element
-new_node=double_linked_list(20)
-new_node.next(head)
-head.prev(new_node)
+def insert_at_head(head,val):
+    head,tail=insert_at_head()
+    new_node=insert_at_head(head,5)
+    new_node.next=head
+    head.prev=new_node
 
-def display(head):
-    current_node=head
-    data=[]
-    while current_node:
-        data.append(str(current_node))
-        current_node=current_node.next
-    print(" -> ".join(data))
-display(head)
 
 
 
