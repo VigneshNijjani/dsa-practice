@@ -4,3 +4,5 @@ while value!=0:
     sum1+=value
     value=int(input("enter another value :"))
 print(sum1)
+
+a=10
