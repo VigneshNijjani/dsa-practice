@@ -5,4 +5,4 @@ while value!=0:
     value=int(input("enter another value :"))
 print(sum1)
 
-a=10
+a=103456
