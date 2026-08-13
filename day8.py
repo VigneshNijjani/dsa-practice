@@ -57,3 +57,19 @@
 #     print("automorphic number")
 # else:
 #     print("not an automorphic number")
+
+
+seen=set()
+double=set()
+l=[1,3,5,9,5,4,3,2,1]
+peak=max(l)
+for i in range(len(l)):
+    if l[i] not in seen:
+        seen.add(l[i])
+    else:
+        double.add(l[i])
+bridge=max(double)
+if bridge:
+    print(bridge)
+else:
+    print(-1)
