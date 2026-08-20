@@ -59,19 +59,19 @@
 #         t+=1
 # print(t)
 
-nums=[9,4,1,7]
-win_size=2
-l=0
-temp=0
-ans=float("inf")
-for r in range(len(nums)):
-    temp+=nums[r]
-    if r-l+1>win_size:
-        temp-=nums[l]
-        l+=1
-    if r-l+1==win_size:
-        ans=min(ans,temp)
-print(ans)
+# nums=[9,4,1,7]
+# win_size=2
+# l=0
+# temp=0
+# ans=float("inf")
+# for r in range(len(nums)):
+#     temp+=nums[r]
+#     if r-l+1>win_size:
+#         temp-=nums[l]
+#         l+=1
+#     if r-l+1==win_size:
+#         ans=min(ans,temp)
+# print(ans)
 
 
 
