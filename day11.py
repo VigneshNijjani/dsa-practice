@@ -29,7 +29,7 @@
 
 
 
-def arrayPairSum( nums: List[int]) -> int:
+def arrayPairSum( nums):
     nums.sort()
     ans=0
     for r in range(len(nums)):
