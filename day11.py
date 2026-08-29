@@ -29,13 +29,13 @@
 
 
 
-def arrayPairSum( nums):
-    nums.sort()
-    ans=0
-    for r in range(len(nums)):
-        if r%2==0:
-            ans+=nums[r]
-    return ans
+# def arrayPairSum( nums):
+#     nums.sort()
+#     ans=0
+#     for r in range(len(nums)):
+#         if r%2==0:
+#             ans+=nums[r]
+#     return ans
 
 
 
