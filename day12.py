@@ -55,3 +55,5 @@
 # n*=10
 # print(100-n)
 
+s="aabaa"
+print(s[::-1],s[::])
