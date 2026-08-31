@@ -28,17 +28,30 @@
 
 
 
-def digitFrequencyScore( n: int) -> int:
-    sum=0
-    d={}
-    while n!=0:
-        rem=n%10
-        if rem in d:
-            d[rem]+=1
-        else:
-            d[rem]=1
-        n//=10
-    for i,j in d.items():
-        sum+=i*j
-    return sum
-print(digitFrequencyScore(101))
+# def digitFrequencyScore( n: int) -> int:
+#     sum=0
+#     d={}
+#     while n!=0:
+#         rem=n%10
+#         if rem in d:
+#             d[rem]+=1
+#         else:
+#             d[rem]=1
+#         n//=10
+#     for i,j in d.items():
+#         sum+=i*j
+#     return sum
+# print(digitFrequencyScore(101))
+
+# n=15
+# if n%10==5:
+#     n+=1
+# n/=10
+# n=round(n)
+# print(n)
+# # if n==1:
+# #     pass
+# # else:
+# n*=10
+# print(100-n)
+
