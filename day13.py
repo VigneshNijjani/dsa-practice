@@ -24,11 +24,34 @@ new_node.next=head
 head=new_node
 
 # traversing agin
-while head:
-    print(head.data,end="->")
-    head=head.next
+# befor linked list is 10->20->30->Null
+curr=head
+while curr:
+    print(curr.data,end="->")
+    curr=curr.next
 print("Null")
 
 # now linked list is 0->10->20->30->Null
 
 
+# deleting a kay or node lets say 30
+
+key=30
+curr =head
+prev=None
+while curr and curr.data != key:
+    prev=curr
+    curr=curr.next
+
+# only used if you want to delete head node
+if head==curr:
+    head=head.next
+elif curr:
+    prev.next=curr.next
+
+
+curr =head
+while curr:
+    print(curr.data,end="->")
+    curr=curr.next
+print("Null")
