@@ -56,18 +56,18 @@
 
 # n=[1,2,3]
 # print(n*2)
-def sol(num,k):
-    l=0
-    temp=num
-    if k<0:
-        num=num*(k*-1)
-    else:
-        num=num*k
-    for i in range(len(temp)):
-        k=k
-        temp[i]=sum(num[i+1:k+1])
-        print(temp[i])
-        print(num,temp)
+# def sol(num,k):
+#     l=0
+#     temp=num
+#     if k<0:
+#         num=num*(k*-1)
+#     else:
+#         num=num*k
+#     for i in range(len(temp)):
+#         k=k
+#         temp[i]=sum(num[i+1:k+1])
+#         print(temp[i])
+#         print(num,temp)
 
 
-sol([5,7,1,4],3)
+# sol([5,7,1,4],3)
