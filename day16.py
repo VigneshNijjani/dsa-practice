@@ -16,15 +16,15 @@
 # print(rever("hello"))
 
 
-def isPalindrome( s,l=0,r=None,list1=[]) -> bool:
-    if r is None:
-        list1.extend(i.lower()for i in s if i.isalnum())
-        r=len(list1)-1 
-    if l>r and list1[l]!=list1[r]:
-        return True
-    return isPalindrome(list1,l+1,r-1,list1)
+# def isPalindrome( s,l=0,r=None,list1=[]) -> bool:
+#     if r is None:
+#         list1.extend(i.lower()for i in s if i.isalnum())
+#         r=len(list1)-1 
+#     if l>r and list1[l]!=list1[r]:
+#         return True
+#     return isPalindrome(list1,l+1,r-1,list1)
     
-print(isPalindrome("A man, a plan, a canal: Panama"))
+# print(isPalindrome("A man, a plan, a canal: Panama"))
 
 
 # s="hello"
@@ -35,3 +35,21 @@ print(isPalindrome("A man, a plan, a canal: Panama"))
 #     l+=1
 #     r-=1
 # print(s)
+
+
+def subsets( nums):
+    a=[]
+    def backtrack(index,sub_sets):
+        if index==len(nums):
+            a.append(sub_sets[:])
+            return
+        
+        sub_sets.append(nums[index])
+        backtrack(index+1,sub_sets)
+
+        sub_sets.pop()
+        backtrack(index+1,sub_sets)
+         
+    backtrack(0,[])
+    return a
+print(subsets([1,2,3]))
