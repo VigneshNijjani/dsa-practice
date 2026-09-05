@@ -37,22 +37,22 @@
 # print(s)
 
 
-# def subsets( nums):
-#     a=[]
-#     def backtrack(index,sub_sets):
-#         if index==len(nums):
-#             a.append(sub_sets[:])
-#             return
+def subsets( nums):
+    a=[]
+    def backtrack(index,sub_sets):
+        if index==len(nums):
+            a.append(sub_sets[:])
+            return
         
-#         sub_sets.append(nums[index])
-#         backtrack(index+1,sub_sets)
+        sub_sets.append(nums[index])
+        backtrack(index+1,sub_sets)
 
-#         sub_sets.pop()
-#         backtrack(index+1,sub_sets)
+        sub_sets.pop()
+        backtrack(index+1,sub_sets)
          
-#     backtrack(0,[])
-#     return a
-# print(subsets([1,2,3]))
+    backtrack(0,[])
+    return a
+print(subsets([1,2,3]))
 
 # n=[1,2,3]
 # print(n*2)
