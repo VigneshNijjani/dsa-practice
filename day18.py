@@ -39,16 +39,16 @@
 # print(minCostClimbingStairs([10,15,20]))
 
 
-def numDistinct(s,t):
-    def helper(index,j):
-        if j ==len(t):
-            return 1
-        if index==len(s):
-            return 0
-        if s[index]==t[j]:
-            pick=helper(index+1,j+1)
-            skip=helper(index+1,j)
-            return pick+skip
-        return helper(index+1,j)
-    return helper(0,0)
-print(numDistinct(s = "rabbbit", t = "rabbit"))
+# def numDistinct(s,t):
+#     def helper(index,j):
+#         if j ==len(t):
+#             return 1
+#         if index==len(s):
+#             return 0
+#         if s[index]==t[j]:
+#             pick=helper(index+1,j+1)
+#             skip=helper(index+1,j)
+#             return pick+skip
+#         return helper(index+1,j)
+#     return helper(0,0)
+# print(numDistinct(s = "rabbbit", t = "rabbit"))
