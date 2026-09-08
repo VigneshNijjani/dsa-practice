@@ -52,3 +52,60 @@
 #         return helper(index+1,j)
 #     return helper(0,0)
 # print(numDistinct(s = "rabbbit", t = "rabbit"))
+
+
+def johnson_order(a, b):
+    n = len(a)
+
+    jobs = list(range(n))
+
+    # Johnson's Rule
+    jobs.sort(key=lambda i: (
+        0 if a[i] <= b[i] else 1,
+        a[i] if a[i] <= b[i] else -b[i]
+    ))
+
+    return jobs
+
+
+def completion_time(order, a, b, removed):
+    station1 = 0
+    station2 = 0
+
+    for i in order:
+        station1 += a[i]
+
+        if i == removed:
+            current_b = 0
+        else:
+            current_b = b[i]
+
+        station2 = max(station2, station1) + current_b
+
+    return station2
+
+
+def solve():
+    n = int(input())
+
+    a = list(map(int, input().split()))
+    b = list(map(int, input().split()))
+
+    order = johnson_order(a, b)
+
+    ans = float('inf')
+
+    for removed in range(n):
+        # Removed b[i] becomes 0.
+        # It should be placed at the end.
+        remaining = [i for i in order if i != removed]
+        remaining.append(removed)
+
+        time = completion_time(remaining, a, b, removed)
+
+        ans = min(ans, time)
+
+    print(ans)
+
+
+solve()
